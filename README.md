@@ -28,6 +28,11 @@ Should be a function. Is called with two arguments - the URL of the current page
 
 Follow the Add-on SDK's documentation for [third party packages](https://addons.mozilla.org/en-US/developers/docs/sdk/1.4/dev-guide/addon-development/third-party-packages.html).
 
+## Code inspiration from
+
+* [Firefox Share Add-on](https://github.com/mozilla/fx-share-addon)
+* [The toolbarbutton package](https://github.com/voldsoftware/toolbarbutton-jplib)
+
 ## In action in
 
 * **Flattr Firefox Add-on**: [Source](https://github.com/flattr/fx-flattr-addon)
