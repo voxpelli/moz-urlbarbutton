@@ -3,7 +3,7 @@
     "description": "URLBar Buttons for Jetpacks",
     "keywords": ["urlbar", "urlbarbutton", "button", "ui"],
     "author": "Pelle Wessman (http://kodfabrik.se/) <pelle@kodfabrik.se>",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "license": "The MIT License (http://www.opensource.org/licenses/mit-license.php)",
     "dependencies": ["api-utils", "addon-kit"]
 }
