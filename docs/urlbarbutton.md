@@ -31,11 +31,38 @@ Creates a urlbarbutton.
 
 @prop [onClick] {Function}
 	A callback to fire when the urlbar button is clicked. Is called with the HTML page as its context and with the URL of the page as its first parameter.
+</api>
 
-@prop [onLocationChange] {Function}
-  A callback for checking if the button should be showed on the current page or not. Called when the location is changed in the location bar. Is called with the HTML page as its context and gets two parameters - first is the URL of the page, second is a callback to use for telling whether the button should be shown or not. Callback should be sent true if the button should be hidden, false if it should be shown and null if the state shouldn't be changed.
+<api name="getButtons">
+@method
+Returns an array of the button elements in all the browsers windows.
 
-@prop [onPageShow] {Function}
-  Same as onLocationChange, but called when the page is loaded.
+@param [href] {String}
+	Limit the buttons returned to just those from windows with an active tab pointing to the specified URL.
+</api>
+
+<api name="setImage">
+@method
+Sets the image of the button.
+
+@param src {String}
+	The path of the image to use for the buttons.
+@param [href] {String}
+	Limits the buttons for which the image is changed to just those from windows with an active tab pointing to the specified URL.
+</api>
+
+<api name="setVisibility">
+@method
+Sets the visibility of the button.
+
+@param show {Boolean}
+	Specify `true` to show the button and `false` to hide it.
+@param [href] {String}
+	Limits the buttons for which the visibility is changed to just those from windows with an active tab pointing to the specified URL.
+</api>
+
+<api name="remove">
+@method
+Removes the button from the browser, should eg. be used when a restartless add-on is disabled or uninstalled.
 </api>
 </api>

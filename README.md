@@ -5,34 +5,57 @@ The UrlbarButton module allows for easy adding of buttons to the urlbar in Firef
 
 ## Usage
 
-    var UrlbarButton = require('urlbarbutton').UrlbarButton;
-    UrlbarButton({
-      id : 'foobar-button',
-      image : data.url("foobar-button.png"),
-      onClick : doTheThing,
-      showForPage : checkPage
-    });
+    var urlbarButton = require('urlbarbutton').UrlbarButton,
+      button;
+    
+    exports.main = function () {
+      button = showForPage({
+        id : 'foobar-button',
+        image : data.url("foobar-button.png"),
+        onClick : doTheThing,
+      });
+    };
+    
+    exports.onUnload = function (reason) {
+      if (reason !== 'shutdown') {
+        button.remove();
+      }
+    };
 
 ## Options
 
-* **id** - a string identifier that identifies the specific urlbar button.
-* **image** - an image for the urlbar button. (optional)
-* **onClick** - a callback to fire on a click on the urlbar button. (optional)
-* **showForPage** - a callback that checks if the button should be showed on the current page or not. (optional)
+* **id** - a string identifier that identifies the specific button.
+* **image** - a path to an image for the button. (optional)
+* **onClick** - a callback to fire on a click on the button. (optional)
 
-### Option syntax: showForPage
+### Option syntax: onClick
 
-Should be a function. Is called with two arguments - the URL of the current page and a callback function that is invoked with "true" if the button should be hidden or "false" if it should be shown. The context of the showForPage function is the document of the page that is checked.
+Should be a function. Is called with the URL of the current page as a single argument and has the document of the page that is checked as its context.
 
 ## How to use
 
-Follow the Add-on SDK's documentation for [third party packages](https://addons.mozilla.org/en-US/developers/docs/sdk/1.4/dev-guide/addon-development/third-party-packages.html).
+Follow the Add-on SDK's documentation for [third party packages](https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/tutorials/adding-menus.html).
 
 ## Code inspiration from
 
 * [Firefox Share Add-on](https://github.com/mozilla/fx-share-addon)
 * [The toolbarbutton package](https://github.com/voldsoftware/toolbarbutton-jplib)
 
+## Other modules usable with this one
+
+* [ShowForPage](https://github.com/voxpelli/moz-showforpage)
+
 ## In action in
 
 * **Flattr Firefox Add-on**: [Source](https://github.com/flattr/fx-flattr-addon)
+
+## Changelog
+
+### 0.4.0
+
+* No longer handling the decision of whether a button should be shown or not. Moved the `onLocationChange` and `onPageShow` listeners, that were called when a new page was loaded, into a new module, [ShowForPage](https://github.com/voxpelli/moz-showforpage), and removed support for those listeners along with removing the callbacks that were used in them.
+* Changed `setImage` and `setVisibility` to have the href-parameter as the last parameter instead of the first as that makes more sense for an optional parameter.
+
+### 0.3.0
+
+* No changelog being tracked for this and prior version, but main changes were related to extended ways for a button to be hidden and shown.
