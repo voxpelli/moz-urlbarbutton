@@ -49,6 +49,10 @@ Follow the Add-on SDK's documentation for [third party packages](https://addons.
 
 * **Flattr Firefox Add-on**: [Source](https://github.com/flattr/fx-flattr-addon)
 
+## Related work
+
+* **Mozilla Add-on SDK**: [New Add-ons UX](https://wiki.mozilla.org/Features/Jetpack/Addons_In_Toolbar) in the (2012Q2 Goals](https://wiki.mozilla.org/Jetpack/Goals/2012Q2)
+
 ## Changelog
 
 ### 0.4.0
