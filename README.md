@@ -59,6 +59,8 @@ Follow the Add-on SDK's documentation for [third party packages](https://addons.
 
 * No longer handling the decision of whether a button should be shown or not. Moved the `onLocationChange` and `onPageShow` listeners, that were called when a new page was loaded, into a new module, [ShowForPage](https://github.com/voxpelli/moz-showforpage), and removed support for those listeners along with removing the callbacks that were used in them.
 * Changed `setImage` and `setVisibility` to have the href-parameter as the last parameter instead of the first as that makes more sense for an optional parameter.
+* Changed `setVisibility` to have its href parameter be optional for real
+* Added new `getVisibility` method
 
 ### 0.3.0
 

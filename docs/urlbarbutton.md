@@ -61,6 +61,14 @@ Sets the visibility of the button.
 	Limits the buttons for which the visibility is changed to just those from windows with an active tab pointing to the specified URL.
 </api>
 
+<api name="getVisibility">
+@method
+Gets the visibility of the button - returns `true` if a button is showed in any checked window, `false` if no buttons are shown in any of the checked windows and `undefined` if no windows are checked.
+
+@param [href] {String}
+	Limits the buttons for which the visibility is checked to just those from windows with an active tab pointing to the specified URL.
+</api>
+
 <api name="remove">
 @method
 Removes the button from the browser, should eg. be used when a restartless add-on is disabled or uninstalled.
