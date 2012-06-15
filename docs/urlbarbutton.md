@@ -29,6 +29,9 @@ Creates a urlbarbutton.
 @prop [image] {String}
 	A url to an image for the urlbar button.
 
+@prop [tooltip] {String}
+	A tooltip for the urlbar button.
+
 @prop [onClick] {Function}
 	A callback to fire when the urlbar button is clicked. Is called with the HTML page as its context and with the URL of the page as its first parameter.
 </api>

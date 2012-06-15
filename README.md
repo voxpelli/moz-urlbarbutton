@@ -26,6 +26,7 @@ The UrlbarButton module allows for easy adding of buttons to the urlbar in Firef
 
 * **id** - a string identifier that identifies the specific button.
 * **image** - a path to an image for the button. (optional)
+* **tooltip** - a tooltip text for the button. (optional)
 * **onClick** - a callback to fire on a click on the button. (optional)
 
 ### Option syntax: onClick
@@ -61,6 +62,7 @@ Follow the Add-on SDK's documentation for [third party packages](https://addons.
 * Changed `setImage` and `setVisibility` to have the href-parameter as the last parameter instead of the first as that makes more sense for an optional parameter.
 * Changed `setVisibility` to have its href parameter be optional for real
 * Added new `getVisibility` method
+* Button can now have a tooltip
 
 ### 0.3.0
 
