@@ -56,6 +56,10 @@ Follow the Add-on SDK's documentation for [third party packages](https://addons.
 
 ## Changelog
 
+### 0.5.0
+
+* Rewritten to no longer use deprecated window-utils package
+
 ### 0.4.1
 
 * Support for Mozilla's Add-on SDK version 1.13b1
