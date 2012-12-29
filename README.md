@@ -56,6 +56,10 @@ Follow the Add-on SDK's documentation for [third party packages](https://addons.
 
 ## Changelog
 
+### 0.4.1
+
+* Support for Mozilla's Add-on SDK version 1.13b1
+
 ### 0.4.0
 
 * No longer handling the decision of whether a button should be shown or not. Moved the `onLocationChange` and `onPageShow` listeners, that were called when a new page was loaded, into a new module, [ShowForPage](https://github.com/voxpelli/moz-showforpage), and removed support for those listeners along with removing the callbacks that were used in them.
