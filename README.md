@@ -9,7 +9,7 @@ The UrlbarButton module allows for easy adding of buttons to the urlbar in Firef
       button;
     
     exports.main = function () {
-      button = showForPage({
+      button = urlbarButton({
         id : 'foobar-button',
         image : data.url("foobar-button.png"),
         onClick : doTheThing,
