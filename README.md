@@ -56,6 +56,15 @@ Follow the Add-on SDK's documentation for [third party packages](https://addons.
 
 ## Changelog
 
+### 0.6.0
+
+* New method, `setOptions()`, that enables changing tooltip and click action
+* New click handler option, `options.gotoUrl`, that will open the specified URL on click
+
+### 0.5.0
+
+* Released, but withdrawn and reverted. Focused on updating the package to better support new SDK versions, but became broken and thus all changes was reverted.
+
 ### 0.4.1
 
 * Support for Mozilla's Add-on SDK version 1.13b1
